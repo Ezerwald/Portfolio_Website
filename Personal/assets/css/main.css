@@ -40,15 +40,20 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #1a1a1a;
-  --surface-color: #343434;
+  --background-color: #ffffff;; /* Background color for the entire website, including individual sections */
+  --default-color: #1a1a1a; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #18d26e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #fafafa; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: rgba(15, 15, 15, 0.975);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #292929f9;
+  --background-color: #000000; /* Background color for the entire website, including individual sections */
+  --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #18d26e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #1a1a1a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #000000;
 }
 
@@ -1473,4 +1478,26 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.theme-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-button-container .toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.theme-button-container .toggle-button:hover {
+  background-color: #13a455; /* Slightly darker shade of the accent color */
 }
