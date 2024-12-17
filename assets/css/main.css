@@ -1501,3 +1501,15 @@ section,
 .theme-button-container .toggle-button:hover {
   background-color: #13a455; /* Slightly darker shade of the accent color */
 }
+
+.clock-container{
+  font-size: 1.7rem;
+}
+
+.symbol{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: rgb(255, 255, 255);
+  padding-top: 10px;
+}

@@ -202,3 +202,23 @@
   });
 
 })();
+
+// Function to get the current time and format it as HH:MM:SS
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  
+  // Combine the hours, minutes, and seconds into a readable format
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  
+  // Display the time in the #clock element
+  document.getElementById('clock').textContent = timeString;
+}
+
+// Call updateClock once to initialize
+updateClock();
+
+// Set interval to update the clock every second
+setInterval(updateClock, 1000);
